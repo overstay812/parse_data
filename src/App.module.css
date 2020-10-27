@@ -5,7 +5,7 @@
   margin: 0 auto;
   border: 1px solid cadetblue;
   padding: 40px 20px 10px 20px;
-  min-width: 400px;
+  min-width: 500px;
   background: rgb(246, 250, 248);
 }
 .inputWrapper {
@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 40px;
+  margin-bottom: 40px;
 }
 .navLink {
   padding: 8px 30px;

@@ -6,7 +6,7 @@ import youtubeApi from './api/youtube'
 
 
 function App() {
-const [inputValue, setInputValue] = useState('')
+const [inputValue, setInputValue] = useState('home')
 const [videosMetaInfo, setVideosMetaInfo] = useState([])
 const [selectedVideoId, setSelectedVideoId] = useState(null)
 
@@ -19,7 +19,7 @@ const [selectedVideoId, setSelectedVideoId] = useState(null)
   setVideosMetaInfo(response.data.items)
   setSelectedVideoId(response.data.items[0].id.videoId)
 }
-console.log(videosMetaInfo);
+// console.log(videosMetaInfo);
 
 
   return (
@@ -40,8 +40,7 @@ console.log(videosMetaInfo);
           <a href="#" className={`${styles.navLink} ${styles.activeLink}`} >Результаты поиска</a>
           <a href="#" className={styles.navLink}>Закладки</a>
         </div>
-        {}
-        <Item />
+        {videosMetaInfo && videosMetaInfo.map(item=> <Item {...item}/>)}
       </div>
     </div>
   );
