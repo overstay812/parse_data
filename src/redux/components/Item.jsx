@@ -7,7 +7,6 @@ const Item = ({ snippet }) => {
   let data = snippet.publishTime;
   data = data.split("T");
   data = data[0];
-  console.log(data);
 
   console.log(snippet);
   return (
@@ -23,6 +22,7 @@ const Item = ({ snippet }) => {
           <p>{snippet.description}</p>
         </div>
       </div>
+      
       <div className={styles.toolBar}>
         <button className={styles.bookmarkBtn}>
           <img src={bookmark} className={styles.bookmarkImg} alt="bookmark" />
