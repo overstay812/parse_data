@@ -1,12 +1,22 @@
+
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  min-height: 100vh;
   max-width: 1200px;
+  min-width: 500px;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid cadetblue;
   padding: 40px 20px 10px 20px;
-  min-width: 500px;
   background: rgb(246, 250, 248);
+}
+.mainTitle{
+  margin: 0 auto;
+  margin-bottom: 10px;
+  color: cadetblue;
 }
 .inputWrapper {
   display: flex;
@@ -15,6 +25,7 @@
   align-items: center;
   background: rgb(252, 250, 250);
   border-radius: 5px;
+  max-height: 26px;
   padding: 1px;
   border: 1px solid cadetblue;
 }
@@ -22,7 +33,7 @@
   width: 100%;
   border: none;
   outline: none;
-  background: rgb(246, 250, 248);
+  background:  rgb(252, 250, 250);
 }
 .imgSearch {
   margin: 0 3%;
@@ -36,8 +47,24 @@
   color: white;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .searchBtn:hover {
+  background: rgb(56, 112, 114);
+}
+.moreBtn{
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 5px;
+  padding: 5px ;
+  background: cadetblue;
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.moreBtn:hover {
   background: rgb(56, 112, 114);
 }
 .navigation {
