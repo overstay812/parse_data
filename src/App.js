@@ -59,10 +59,12 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
             onClick={() => setActiveLink(false)}>Закладки</Link>
         </div>
         <Route exact path="/">
-          {arrayData && arrayData.map((item, index) => <Item {...item} index={index} />)}
+          <div>
+            {arrayData && arrayData.map((item, index) => <Item {...item} index={index} />)}
+            {arrayData.length > 0 ? <button className={styles.moreBtn} onClick={() => downloadMoreVideo()}>Загрузить еще...</button> : null}
+          </div>
         </Route>
         <Route exact path="/bookmarks">
-          <div>
           {arrayData && arrayData.map((item, index) => {
             if (item.bookmark === true) {
               return <Item {...item} index={index} />
@@ -70,11 +72,9 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
               return null
             }
           })}
-        {arrayData.length > 0 ? <button className={styles.moreBtn} onClick={() => downloadMoreVideo()}>Загрузить еще...</button> :  null}
-        </div>
         </Route>
-        
-        
+
+
       </div>
       {isVideoActive ? <PopupVideoScreen /> : null}
     </div>
