@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./Item.module.css";
-import bookmark from "../../assets/img/bookmark.svg";
-import bookmarkRed from "../../assets/img/bookmarkred.svg";
+import bookmark from "../assets/img/bookmark.svg";
+import bookmarkRed from "../assets/img/bookmarkred.svg";
 
 const Item = ({ snippet }) => {
   let data = snippet.publishTime;
   data = data.split("T");
   data = data[0];
 
-  console.log(snippet);
+  // console.log(snippet);
   return (
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
