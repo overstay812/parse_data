@@ -87,3 +87,6 @@
   border-bottom: 5px solid cadetblue;
   color: cadetblue;
 }
+.loader {
+  margin: 0 auto;
+}

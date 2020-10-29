@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Item.module.css";
 import bookmarkImg from "../assets/img/bookmark.svg";
 import bookmarkRedImg from "../assets/img/bookmarkred.svg";
@@ -7,6 +7,7 @@ import { addbookmark, getCurrentVideoId, setVideoActive } from "../redux/action"
 
 const Item = ({ snippet,id, bookmark, index, addbookmark, setVideoActive, getCurrentVideoId }) => {
   let videoId = id.videoId
+
 
   let data = snippet.publishTime;
   data = data.split("T");
