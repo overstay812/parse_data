@@ -15,10 +15,10 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
   const [activeLink, setActiveLink] = useState(true)
   const [loader, setLoader] = useState(true)
 
-  let onSearch = async keyword => {
+  let onSearch = async () => {
     let response = await youtubeApi.get("/search", {
       params: {
-        q: keyword
+        q: inputValue
       }
     })
     await function () {
@@ -27,10 +27,10 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
     getArrayData(response.data.items)
   }
 
-  let downloadMoreVideo = async keyword => {
+  let downloadMoreVideo = async () => {
     let response = await youtubeApi.get("/search", {
       params: {
-        q: keyword
+        q: inputValue
       }
     })
     await function () {
@@ -38,6 +38,7 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
     }()
     getArrayDataMore(response.data.items)
   }
+
 
  useEffect(()=> setLoader(false),[arrayData])
   return (
@@ -85,7 +86,7 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
           })}
         </Route>
 
-        {loader ? <Loader type="Ring" color="cadetblue" height={70} width={70} className={styles.loader} /> : null}
+        {loader ? <Loader type="Bars" color="cadetblue" height={70} width={70} className={styles.loader} /> : null}
       </div>
       {isVideoActive ? <PopupVideoScreen /> : null}
     </div>

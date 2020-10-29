@@ -1,5 +1,5 @@
 const initalState = {
-    arrayData: [],
+    arrayData:  JSON.parse(localStorage['ArrayVideoData']),
     arrayDataBookmark: [],
     isVideoActive: false,
     currentVideoId: '',
@@ -37,3 +37,6 @@ export const dataReducer = (state = initalState, action) => {
         default: return state
     }
 }
+
+
+
