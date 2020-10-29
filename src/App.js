@@ -59,7 +59,7 @@ function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
             onClick={() => setActiveLink(false)}>Закладки</Link>
         </div>
         <Route exact path="/">
-          <div>
+          <div className={styles.itemsWrapper}>
             {arrayData && arrayData.map((item, index) => <Item {...item} index={index} />)}
             {arrayData.length > 0 ? <button className={styles.moreBtn} onClick={() => downloadMoreVideo()}>Загрузить еще...</button> : null}
           </div>
