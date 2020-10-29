@@ -9,7 +9,7 @@ import { Link, Route } from 'react-router-dom'
 import PopupVideoScreen from './components/PopupVideoScreen'
 
 function App({ getArrayData, getArrayDataMore, arrayData, isVideoActive }) {
-  const [inputValue, setInputValue] = useState('home')
+  const [inputValue, setInputValue] = useState('')
   const [activeLink, setActiveLink] = useState(true)
 
   let onSearch = async keyword => {
