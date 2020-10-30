@@ -1,6 +1,5 @@
 const initalState = {
     arrayData:  JSON.parse(localStorage['ArrayVideoData']),
-    arrayDataBookmark: [],
     isVideoActive: false,
     currentVideoId: '',
 }
@@ -10,11 +9,6 @@ export const dataReducer = (state = initalState, action) => {
             return {
                 ...state, arrayData: action.payload.arrayData
             }
-        case 'GET_ARRAY_DATA_MORE':
-            return {
-                ...state, arrayData: state.arrayData.concat(action.payload.arrayData)
-            }
-
         case 'ADD_BOOKMARK':
             let currentIndex = action.payload.index
             return {

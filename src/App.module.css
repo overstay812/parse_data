@@ -50,26 +50,9 @@
 .searchBtn:hover {
   background: rgb(56, 112, 114);
 }
-.moreBtn {
-  width: 150px;
-  border-radius: 5px;
-  padding: 5px;
-  background: cadetblue;
-  color: white;
-  border: none;
-  outline: none;
-  margin-top: 30px;
-  cursor: pointer;
-}
-.itemsWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.moreBtn:hover {
-  background: rgb(56, 112, 114);
-}
+
+
+
 .navigation {
   display: flex;
   flex-direction: row;

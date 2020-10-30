@@ -7,14 +7,6 @@ export const getArrayData = arrayData => {
         }
     }
 }   
-export const getArrayDataMore = arrayData => {
-  return {
-      type: 'GET_ARRAY_DATA_MORE',
-      payload: {
-        arrayData
-      }
-  }
-}  
 
 export const addbookmark = index => {
   return {

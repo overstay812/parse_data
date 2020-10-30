@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Item.module.css";
 import bookmarkImg from "../assets/img/bookmark.svg";
 import bookmarkRedImg from "../assets/img/bookmarkred.svg";
@@ -18,7 +18,7 @@ const Item = ({ snippet,id, bookmark, index, addbookmark, setVideoActive, getCur
       <div className={styles.contentWrapper}>
         <img
           src={snippet.thumbnails.high.url}
-          alt="preview image"
+          alt="preview"
           className={styles.previewImg}
           onClick={()=> {
           getCurrentVideoId(videoId)
