@@ -55,7 +55,7 @@ function App({ getArrayData, isVideoActive }) {
 
         </div>
          
-        <React.Suspense fallback={<CircularProgress className={styles.loader}/>} >
+        <React.Suspense fallback={<p className={styles.loader}>Загрузка...</p>}>
            <MainContent/>
         </React.Suspense>
         
