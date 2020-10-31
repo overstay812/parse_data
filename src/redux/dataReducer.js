@@ -1,20 +1,15 @@
 const initalState = {
-    arrayData: [],
-    arrayDataBookmark: [],
+    arrayData: localStorage['ArrayVideoData'] === undefined? [] : JSON.parse(localStorage['ArrayVideoData']),
     isVideoActive: false,
     currentVideoId: '',
 }
+
 export const dataReducer = (state = initalState, action) => {
     switch (action.type) {
         case 'GET_ARRAY_DATA':
             return {
                 ...state, arrayData: action.payload.arrayData
             }
-        case 'GET_ARRAY_DATA_MORE':
-            return {
-                ...state, arrayData: state.arrayData.concat(action.payload.arrayData)
-            }
-
         case 'ADD_BOOKMARK':
             let currentIndex = action.payload.index
             return {
@@ -37,3 +32,6 @@ export const dataReducer = (state = initalState, action) => {
         default: return state
     }
 }
+
+
+

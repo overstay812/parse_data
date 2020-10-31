@@ -8,6 +8,7 @@ import { addbookmark, getCurrentVideoId, setVideoActive } from "../redux/action"
 const Item = ({ snippet,id, bookmark, index, addbookmark, setVideoActive, getCurrentVideoId }) => {
   let videoId = id.videoId
 
+
   let data = snippet.publishTime;
   data = data.split("T");
   data = data[0];
@@ -17,7 +18,7 @@ const Item = ({ snippet,id, bookmark, index, addbookmark, setVideoActive, getCur
       <div className={styles.contentWrapper}>
         <img
           src={snippet.thumbnails.high.url}
-          alt="preview image"
+          alt="preview"
           className={styles.previewImg}
           onClick={()=> {
           getCurrentVideoId(videoId)
