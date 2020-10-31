@@ -6,12 +6,11 @@ import { connect } from 'react-redux'
 import { getArrayData } from './redux/action'
 import { Link } from 'react-router-dom'
 import PopupVideoScreen from './components/PopupVideoScreen'
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-// import Loader from 'react-loader-spinner'
+import { CircularProgress } from '@material-ui/core'
 
 const MainContent = React.lazy(()=> import('./components/MainContent'))
 
-function App({ getArrayData, arrayData, isVideoActive }) {
+function App({ getArrayData, isVideoActive }) {
   const [inputValue, setInputValue] = useState('')
   const [activeLink, setActiveLink] = useState(true)
 
@@ -31,6 +30,7 @@ function App({ getArrayData, arrayData, isVideoActive }) {
     <div className={styles.app}>
       <div className={styles.container}>
         <h1 className={styles.mainTitle}>Youtube parser</h1>
+        
         <div className={styles.inputWrapper}>
           <img src={searchIcon} className={styles.imgSearch} alt="search icon" />
           <input type="text"
@@ -54,7 +54,8 @@ function App({ getArrayData, arrayData, isVideoActive }) {
             onClick={() => setActiveLink(false)}>Закладки</Link>
 
         </div>
-        <React.Suspense fallback={<p>zxc</p>}>
+         
+        <React.Suspense fallback={<CircularProgress className={styles.loader}/>} >
            <MainContent/>
         </React.Suspense>
         

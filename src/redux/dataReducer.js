@@ -1,8 +1,9 @@
 const initalState = {
-    arrayData:  JSON.parse(localStorage['ArrayVideoData']),
+    arrayData: localStorage['ArrayVideoData'] === undefined? [] : JSON.parse(localStorage['ArrayVideoData']),
     isVideoActive: false,
     currentVideoId: '',
 }
+
 export const dataReducer = (state = initalState, action) => {
     switch (action.type) {
         case 'GET_ARRAY_DATA':

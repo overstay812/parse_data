@@ -6,7 +6,6 @@ import styles from './MainContent.module.css'
 
 
 const MainContent = ({arrayData}) => {
-  
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
  };
