@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import { getArrayData } from './redux/action'
 import { Link } from 'react-router-dom'
 import PopupVideoScreen from './components/PopupVideoScreen'
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import Loader from 'react-loader-spinner'
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+// import Loader from 'react-loader-spinner'
 
 const MainContent = React.lazy(()=> import('./components/MainContent'))
 
@@ -54,7 +54,7 @@ function App({ getArrayData, arrayData, isVideoActive }) {
             onClick={() => setActiveLink(false)}>Закладки</Link>
 
         </div>
-        <React.Suspense fallback={<Loader type="Bars" color="cadetblue" height={70} width={70} className={styles.loader} />}>
+        <React.Suspense fallback={<p>zxc</p>}>
            <MainContent/>
         </React.Suspense>
         
