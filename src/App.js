@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { getArrayData } from './redux/action'
 import { Link } from 'react-router-dom'
 import PopupVideoScreen from './components/PopupVideoScreen'
-import { CircularProgress } from '@material-ui/core'
 
 const MainContent = React.lazy(()=> import('./components/MainContent'))
 
@@ -55,7 +54,7 @@ function App({ getArrayData, isVideoActive }) {
 
         </div>
          
-        <React.Suspense fallback={<p className={styles.loader}>Загрузка...</p>}>
+        <React.Suspense fallback={<p className={styles.loader}>Загрузка...</p>} >
            <MainContent/>
         </React.Suspense>
         
